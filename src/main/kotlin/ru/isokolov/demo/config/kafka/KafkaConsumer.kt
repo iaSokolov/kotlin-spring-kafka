@@ -1,4 +1,4 @@
-package ru.isokolov.demo.config
+package ru.isokolov.demo.config.kafka
 
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.common.serialization.StringDeserializer
@@ -11,9 +11,9 @@ import org.springframework.kafka.core.DefaultKafkaConsumerFactory
 
 @Configuration
 @EnableKafka
-public class KafkaConsumer(
+class KafkaConsumer(
     @Value("\${spring.kafka.bootstrap-servers}")
-    private val bootstrapServers: String = "localhost:9092"
+    private val bootstrapServers: String
 ) {
     @Bean
     fun consumerFactory(): ConsumerFactory<String, String> {
@@ -26,4 +26,3 @@ public class KafkaConsumer(
         return DefaultKafkaConsumerFactory(props)
     }
 }
-

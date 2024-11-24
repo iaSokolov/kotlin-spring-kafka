@@ -3,3 +3,8 @@ spring:
     name: kotlin-spring-kafka
   kafka:
     bootstrap-servers: localhost:9092
+
+application:
+  kafka:
+    topic:
+      out: out-events
