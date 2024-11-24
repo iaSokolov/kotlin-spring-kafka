@@ -18,7 +18,5 @@ Open another terminal session and run:
 #### Create topics in Kafka
 ```bash
 ./bin/kafka-topics.sh --create --topic out-events --bootstrap-server localhost:9092 --partitions 10
-```
-```bash
 ./bin/kafka-topics.sh --create --topic in-events --bootstrap-server localhost:9092 --partitions 10
 ```
